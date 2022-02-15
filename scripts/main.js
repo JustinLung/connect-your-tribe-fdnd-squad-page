@@ -13,6 +13,8 @@ menu.addEventListener('click', () => {
 getData();
 
 // Functions
+
+// Function that gets the data from the Tribe API
 async function getData() {
 	try {
 		const request = await fetch("https://tribe.api.fdnd.nl/v1/member");
@@ -24,8 +26,10 @@ async function getData() {
 	}
 }
 
+// Function that renders the data for the market section
 async function renderData(members) {
-	const memberFilter = members.filter(member => member.squadId == 1)
+	// Filters the members on squadId.
+	const memberFilter = members.filter(member => member.squadId === 1)
 	for (let i = 0; i < 6; i++) {
 		document.querySelector(".market-container").insertAdjacentHTML(
 			"afterbegin",
@@ -44,12 +48,16 @@ async function renderData(members) {
                 <p>1.2</p>
               </div>
             </div>
-            <a href="#">Buy Now</a>
+            <a href=#"">Buy Now</a>
           </div>`
 		);
+
+		// If member has no avatar, than it will show another image
 		if (memberFilter[i].avatar === "") document.querySelector(".card-image").src = "../assets/not-available.png";
 	}
 }
+
+// error message function that will be hidden after a certain amount of time.
 function errorMessage() {
 	setTimeout(() => {
 		errorMsg.style.opacity = 1,
