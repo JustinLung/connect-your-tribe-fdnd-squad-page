@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   background-color: var(--marine);
+  background: radial-gradient(circle, rgba(88, 14, 246, 1) 10%, rgba(26, 28, 34, 1) 100%);
   color: var(--white);
 }
 
@@ -47,12 +48,12 @@ ul {
   gap: 1.2em;
 }
 
-li > a {
+li>a {
   transition: .3s ease;
   color: var(--white);
 }
 
-li > a:hover {
+li>a:hover {
   color: var(--blue);
 }
 
@@ -92,7 +93,7 @@ li img {
   transition: transform 0.3s ease-out;
 }
 
-.menu span + span {
+.menu span+span {
   transform: translateY(12px);
 }
 
@@ -100,7 +101,7 @@ li img {
   transform: translateY(8px) rotate(45deg);
 }
 
-.menu.active span + span {
+.menu.active span+span {
   transform: translateY(8px) rotate(-45deg);
 }
 
@@ -170,7 +171,7 @@ li img {
     color: var(--black);
   }
 
-  li > ul {
+  li>ul {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -186,5 +187,45 @@ li img {
     font-size: 1.7rem;
     opacity: 1;
     padding-top: 1em;
+  }
+}
+
+
+/* Overview page styles */
+
+
+.overviewPageContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 5rem;
+}
+
+
+.overviewPageContainer p {
+  margin: 1rem 0rem;
+}
+
+
+.overviewPageGridContainer {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  background-color: #1A1C22;
+  border-radius: 1rem;
+}
+
+.grid-item {
+  width: 320px;
+  height: 440px;
+  margin: 3rem 0rem;
+  border-radius: 1rem;
+  background-color: #3D3A50;
+}
+
+@media (max-width: 40rem) {
+  .overviewPageContainer {
+    margin: 0rem 1rem;
   }
 }
