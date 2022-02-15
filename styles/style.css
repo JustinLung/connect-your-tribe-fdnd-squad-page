@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   background-color: var(--marine);
+  background: radial-gradient(circle, rgba(88,14,246,1) 10%, rgba(26,28,34,1) 100%);
   color: var(--white);
 }
 
@@ -47,12 +48,12 @@ ul {
   gap: 1.2em;
 }
 
-li > a {
+li>a {
   transition: .3s ease;
   color: var(--white);
 }
 
-li > a:hover {
+li>a:hover {
   color: var(--blue);
 }
 
@@ -92,7 +93,7 @@ li img {
   transition: transform 0.3s ease-out;
 }
 
-.menu span + span {
+.menu span+span {
   transform: translateY(12px);
 }
 
@@ -100,7 +101,7 @@ li img {
   transform: translateY(8px) rotate(45deg);
 }
 
-.menu.active span + span {
+.menu.active span+span {
   transform: translateY(8px) rotate(-45deg);
 }
 
@@ -170,7 +171,7 @@ li img {
     color: var(--black);
   }
 
-  li > ul {
+  li>ul {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -186,5 +187,58 @@ li img {
     font-size: 1.7rem;
     opacity: 1;
     padding-top: 1em;
+  }
+}
+
+/* About section styles */
+
+.aboutSectionContainer {
+  display: inline-flex;
+  justify-content: center;
+  margin: 5rem;
+}
+
+.aboutSectionHeader {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.aboutSectionText {
+  flex: 0 0 40%;
+  align-self: center;
+  line-height: 1.5rem;
+  margin-right: 5rem;
+}
+
+.aboutSectionImg {
+  width: 35rem;
+  border-top: #3D3A50 2.5rem solid;
+  border-bottom: #3D3A50 2.5rem solid;
+  border-left: #3D3A50 1.5rem solid;
+  border-right: #3D3A50 1.5rem solid;
+  border-radius: 1rem;
+
+}
+
+@media (max-width: 70rem) {
+  .aboutSectionContainer {
+    flex-direction: column;
+    margin: 0rem;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .aboutSectionText {
+    margin-bottom: 2rem;
+    padding: 0rem 1rem;
+    margin-right: 0rem;
+  }
+
+  .aboutSectionHeader{
+    text-align: center;
+  }
+  .aboutSectionImg {
+    width: 20rem;
   }
 }
