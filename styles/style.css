@@ -203,7 +203,7 @@ li img {
   font-size: 2rem;
 }
 
-.aboutSectionText {
+.aboutSectionContainer div {
   flex: 0 0 40%;
   align-self: center;
   line-height: 1.5rem;
@@ -220,25 +220,45 @@ li img {
 
 }
 
+
+
+
 @media (max-width: 70rem) {
   .aboutSectionContainer {
     flex-direction: column;
     margin: 0rem;
     align-items: center;
-    justify-content: center;
+  
 
   }
 
-  .aboutSectionText {
+  .aboutSectionContainer div {
     margin-bottom: 2rem;
     padding: 0rem 1rem;
     margin-right: 0rem;
   }
 
-  .aboutSectionHeader{
-    text-align: center;
-  }
   .aboutSectionImg {
-    width: 20rem;
+    width: 40rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .aboutSectionContainer {
+    flex-direction: column;
+    margin: 0rem;
+    align-items: center;
+  
+
+  }
+
+  .aboutSectionContainer div {
+    margin-bottom: 2rem;
+    padding: 0rem 1rem;
+    margin-right: 0rem;
+  }
+
+  .aboutSectionImg {
+    width: 25rem;
   }
 }
