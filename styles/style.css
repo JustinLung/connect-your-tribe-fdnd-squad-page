@@ -364,3 +364,10 @@ main {
     margin-right: 0rem;
   }
 }
+
+
+footer {
+  background-color: var(--black);
+  text-align: center;
+  padding: 5em 0;
+}
