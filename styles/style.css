@@ -219,7 +219,6 @@ main {
 .price-container .price-header,
 .card-header .name-header {
   position: relative;
-  z-index: -1;
   opacity: .8;
 }
 
