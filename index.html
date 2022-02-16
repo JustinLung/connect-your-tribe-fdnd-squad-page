@@ -7,6 +7,25 @@
     <title>TribeFDNFT - Home</title>
   </head>
   <body>
+    <div class="preloader">
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+            <circle id="test" cx="40" cy="40" r="32"></circle>
+        </svg>
+      </div>
+    
+      <div class="loader triangle">
+        <svg viewBox="0 0 86 80">
+            <polygon points="43 8 79 72 7 72"></polygon>
+        </svg>
+      </div>
+    
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+            <rect x="8" y="8" width="64" height="64"></rect>
+        </svg>
+      </div>    
+    </div>
     <header>
       <h1>TribeFDNFT</h1>
       <button class="menu" aria-label="Open navigation">
@@ -43,7 +62,12 @@
         <h2>Market</h2>
         <p>Buy our NFT's on our FDNFT Market.</p>
         <a href="market.html">View All NFTS</a>
-        <div class="market-container"></div>
+        <div class="market-container">
+          <noscript>
+            <h2 style="text-align: center;">Oops.. something went wrong ;(</h2>
+            <p style="text-align: center;">Please turn on your Javascript to see all students</p>
+          </noscript>
+        </div>
       </section>
 
     <section id="about" class="aboutSectionContainer">

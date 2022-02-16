@@ -4,6 +4,7 @@ const menu = document.querySelector(".menu");
 const baseURL = "https://tribe.api.fdnd.nl/v1";
 const memberEndpoint = "/member";
 const errorMsg = document.querySelector(".error");
+const preloader = document.querySelector(".preloader");
 const totalRandomNFTS = 6;
 
 menu.addEventListener('click', () => {
@@ -19,6 +20,7 @@ async function getData() {
 	try {
 		const request = await fetch(`${baseURL}${memberEndpoint}`);
 		const response = await request.json();
+		hidePreloader();
 		return response.data.filter(student => student.squadId === 1)
 		// renderData(response.data);
 	} catch (err) {
@@ -48,7 +50,7 @@ async function renderData(members) {
                 <p class="price-tag">1.2</p>
               </div>
             </div>
-            <a href="#">Buy Now</a>
+            <a href="detail.html?memberId=${members[i].memberId}">Buy Now</a>
           </div>`
 		);
 		// If member has no avatar, than it will show another image
@@ -74,7 +76,20 @@ async function getRandomData() {
 	renderData(randomNfts)
 }
 
-// 
+/**
+ * 
+ * hide preloader after a certain amount of time.
+ * @function
+ */
+function hidePreloader() {
+	setTimeout(() => {
+		preloader.style.opacity = 0;
+		setTimeout(() => {
+			document.body.removeChild(preloader)
+		}, 300)
+	}, 2000)
+}
+
 /**
  * error message function that will be hidden after a certain amount of time.
  * @function
