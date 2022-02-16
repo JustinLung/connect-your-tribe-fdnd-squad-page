@@ -1,25 +1,26 @@
 // Variables
-const nav = document.querySelector('.nav');
-const menu = document.querySelector('.menu');
-
+const nav = document.querySelector(".nav");
+const menu = document.querySelector(".menu");
+const baseURL = "https://tribe.api.fdnd.nl/v1";
+const memberEndpoint = "/member";
 const errorMsg = document.querySelector(".error");
-const nameEl = document.querySelector('.name');
+const totalRandomNFTS = 6;
 
 menu.addEventListener('click', () => {
 	menu.classList.toggle('active');
 	nav.classList.toggle('active');
 });
 
-getData();
+getRandomData();
 
 // Functions
-
 // Function that gets the data from the Tribe API
 async function getData() {
 	try {
-		const request = await fetch("https://tribe.api.fdnd.nl/v1/member");
+		const request = await fetch(`${baseURL}${memberEndpoint}`);
 		const response = await request.json();
-		renderData(response.data);
+		return response.data.filter(student => student.squadId === 1)
+		// renderData(response.data);
 	} catch (err) {
 		errorMessage();
 		throw new Error(err);
@@ -29,35 +30,55 @@ async function getData() {
 // Function that renders the data for the market section
 async function renderData(members) {
 	// Filters the members on squadId.
-	const memberFilter = members.filter(member => member.squadId === 1)
-	for (let i = 0; i < 6; i++) {
+	for (let i = 0; i < members.length; i++) {
 		document.querySelector(".market-container").insertAdjacentHTML(
 			"afterbegin",
 			`          
 			<div class="card">
             <figure>
-              <img src="${memberFilter[i].avatar}" alt="Profile Picture" class="card-image"/>
+              <img src="${members[i].avatar}" alt="Profile Picture" class="card-image"/>
             </figure>
             <div class="card-header">
               <div class="name-container">
-                <p>${memberFilter[i].type}</p>
-                <p class="name">${memberFilter[i].name}</p>
+                <p>${members[i].type}</p>
+                <p class="name">${members[i].name}</p>
               </div>
               <div class="price-container">
                 <p>Price</p>
                 <p>1.2</p>
               </div>
             </div>
-            <a href=#"">Buy Now</a>
+            <a href="#">Buy Now</a>
           </div>`
 		);
-
 		// If member has no avatar, than it will show another image
-		if (memberFilter[i].avatar === "") document.querySelector(".card-image").src = "../assets/not-available.png";
+		if (members[i].avatar === "") document.querySelector(".card-image").src = "../assets/not-available.png";
 	}
 }
 
-// error message function that will be hidden after a certain amount of time.
+/**
+ * description
+ * @async
+ * @returns {Array} Array with randomNfts (students)
+ */
+async function getRandomData() {
+	const data = await getData();
+	let randomNfts = [];
+	for (let i = 0; i < totalRandomNFTS; i++) {
+		let random = Math.floor(Math.random() * data.length);
+		while (randomNfts.includes(data[random])) {
+			random = Math.floor(Math.random() * data.length);
+		}
+		randomNfts.push(data[random]);
+	}
+	renderData(randomNfts)
+}
+
+// 
+/**
+ * error message function that will be hidden after a certain amount of time.
+ * @function
+ */
 function errorMessage() {
 	setTimeout(() => {
 		errorMsg.style.opacity = 1,

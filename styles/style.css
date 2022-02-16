@@ -127,6 +127,11 @@ main {
   margin-top: 1em;
 }
 
+#market a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 @media (min-width: 55em) {
   #market {
     padding: 2em;
