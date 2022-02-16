@@ -25,6 +25,7 @@ async function getData() {
 		// renderData(response.data);
 	} catch (err) {
 		errorMessage();
+		hidePreloader();
 		throw new Error(err);
 	}
 }
