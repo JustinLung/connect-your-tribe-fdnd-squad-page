@@ -19,7 +19,11 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   background-color: var(--marine);
-  background: radial-gradient(circle, rgba(88,14,246,1) 10%, rgba(26,28,34,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(88, 14, 246, 1) 10%,
+    rgba(26, 28, 34, 1) 100%
+  );
   color: var(--white);
 }
 
@@ -36,6 +40,10 @@ h1 {
   font-size: 1.5rem;
 }
 
+/* PRELOADER */
+
+/* NAVIGATION */
+
 nav {
   padding: 2px;
   flex-grow: 1;
@@ -48,12 +56,12 @@ ul {
   gap: 1.2em;
 }
 
-li>a {
-  transition: .3s ease;
+li > a {
+  transition: 0.3s ease;
   color: var(--white);
 }
 
-li>a:hover {
+li > a:hover {
   color: var(--blue);
 }
 
@@ -93,7 +101,7 @@ li img {
   transition: transform 0.3s ease-out;
 }
 
-.menu span+span {
+.menu span + span {
   transform: translateY(12px);
 }
 
@@ -101,7 +109,7 @@ li img {
   transform: translateY(8px) rotate(45deg);
 }
 
-.menu.active span+span {
+.menu.active span + span {
   transform: translateY(8px) rotate(-45deg);
 }
 
@@ -150,7 +158,7 @@ li img {
   }
 
   ul li {
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,16 +179,16 @@ li img {
     color: var(--black);
   }
 
-  li>ul {
+  li > ul {
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
-    gap: 0.5em;
+    gap: 0.2em;
   }
 
   nav a img {
-    width: 1em;
+    width: 0.7em;
   }
 
   .nav-text {
@@ -190,7 +198,119 @@ li img {
   }
 }
 
+main {
+  padding: 2rem 1.25rem;
+}
+
+/* MARKET */
+
+.market-container {
+  padding: 2em;
+  border-radius: 0.5em;
+  background-color: var(--black);
+  margin-top: 1em;
+}
+
+#market a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+@media (min-width: 55em) {
+  #market {
+    padding: 2em;
+  }
+
+  .market-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .card {
+    width: 30%;
+  }
+}
+
+.card {
+  background-color: var(--marine);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.card figure {
+  height: 20em;
+  padding: 1.5em;
+  padding-bottom: 1em;
+}
+
+.card img {
+  border-radius: 0.2em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-header {
+  display: flex;
+  flex-grow: 1;
+  padding: 0 1.5em 4em;
+}
+
+.card-header .price-container {
+  margin-left: auto;
+}
+
+.card a {
+  padding: 1em 0 1.5em;
+  border-top: solid var(--white) 2px;
+  color: var(--white);
+  width: 90%;
+  margin-inline: auto;
+}
+
+/* ERROR */
+
+.error {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  background-color: var(--white);
+  color: var(--black);
+  width: 25em;
+  padding: 1.5em 1em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.error h2 {
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.error p {
+  font-size: 1rem;
+}
+
 /* About section styles */
+
+#about {
+  margin-top: 2rem;
+}
+
+#about img {
+  width: 100%;
+}
 
 .aboutSectionContainer {
   display: inline-flex;
@@ -199,7 +319,7 @@ li img {
 }
 
 .aboutSectionHeader {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-size: 2rem;
 }
 
@@ -212,34 +332,23 @@ li img {
 
 .aboutSectionImg {
   width: 35rem;
-  border-top: #3D3A50 2.5rem solid;
-  border-bottom: #3D3A50 2.5rem solid;
-  border-left: #3D3A50 1.5rem solid;
-  border-right: #3D3A50 1.5rem solid;
-  border-radius: 1rem;
-
+  border-top: var(--marine) 2.5rem solid;
+  border-bottom: var(--marine) 2.5rem solid;
+  border-left: var(--marine) 1.5rem solid;
+  border-right: var(--marine) 1.5rem solid;
+  border-radius: .5rem;
 }
-
-
-
 
 @media (max-width: 70rem) {
   .aboutSectionContainer {
     flex-direction: column;
     margin: 0rem;
     align-items: center;
-  
-
   }
 
   .aboutSectionContainer div {
     margin-bottom: 2rem;
-    padding: 0rem 1rem;
     margin-right: 0rem;
-  }
-
-  .aboutSectionImg {
-    width: 40rem;
   }
 }
 
@@ -248,17 +357,10 @@ li img {
     flex-direction: column;
     margin: 0rem;
     align-items: center;
-  
-
   }
 
   .aboutSectionContainer div {
     margin-bottom: 2rem;
-    padding: 0rem 1rem;
     margin-right: 0rem;
-  }
-
-  .aboutSectionImg {
-    width: 25rem;
   }
 }
