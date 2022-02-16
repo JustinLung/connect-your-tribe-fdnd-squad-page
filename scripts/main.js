@@ -40,12 +40,12 @@ async function renderData(members) {
             </figure>
             <div class="card-header">
               <div class="name-container">
-                <p>${members[i].type}</p>
-                <p class="name">${members[i].name}</p>
+                <p class="name-header">FDND ${members[i].type}</p>
+                <p class="name">${members[i].name} ${members[i].surname}</p>
               </div>
               <div class="price-container">
-                <p>Price</p>
-                <p>1.2</p>
+                <p class="price-header">Price</p>
+                <p class="price-tag">1.2</p>
               </div>
             </div>
             <a href="#">Buy Now</a>

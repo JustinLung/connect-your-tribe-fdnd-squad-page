@@ -216,6 +216,31 @@ main {
   text-decoration: underline;
 }
 
+.price-container .price-header,
+.card-header .name-header {
+  position: relative;
+  z-index: -1;
+  opacity: .8;
+}
+
+.price-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2em;
+}
+
+.price-container .price-tag::before {
+  content: "";
+  background-image: url("../assets/ethereum-eth-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+}
+
 @media (min-width: 55em) {
   #market {
     padding: 2em;
@@ -336,7 +361,7 @@ main {
   border-bottom: var(--marine) 2.5rem solid;
   border-left: var(--marine) 1.5rem solid;
   border-right: var(--marine) 1.5rem solid;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 70rem) {
@@ -364,7 +389,6 @@ main {
     margin-right: 0rem;
   }
 }
-
 
 footer {
   background-color: var(--black);
