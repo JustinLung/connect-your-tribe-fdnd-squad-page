@@ -18,7 +18,7 @@ getRandomData();
 // Function that gets the data from the Tribe API
 async function getData() {
 	try {
-		const request = await fetch(`${baseURL}${memberEndpoint}fd`);
+		const request = await fetch(`${baseURL}${memberEndpoint}`);
 		const response = await request.json();
 		hidePreloader();
 		return response.data.filter(student => student.squadId === 1)
