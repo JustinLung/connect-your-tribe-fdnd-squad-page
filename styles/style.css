@@ -234,6 +234,11 @@ width: 25rem;
   display: flex;
   flex-direction: column;
   margin-top: 1em;
+  transition: 1s ;
+}
+
+.card:hover{
+  transform: scale(1.1);
 }
 
 .card figure {
