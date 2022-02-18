@@ -14,6 +14,7 @@ menu.addEventListener('click', () => {
 
 getRandomData();
 
+
 // Functions
 // Function that gets the data from the Tribe API
 async function getData() {
@@ -59,6 +60,33 @@ async function renderData(members) {
 	}
 }
 
+async function renderMarketData(members) {
+	for (let i = 0; i < members.length; i++) {
+		document.querySelector(".overviewPageCardContainer").insertAdjacentHTML(
+			"afterbegin",
+			`          
+			<div class="card">
+            <figure>
+              <img src="${members[i].avatar}" alt="Profile Picture" class="card-image"/>
+            </figure>
+            <div class="card-header">
+              <div class="name-container">
+                <p class="name-header">FDND ${members[i].type}</p>
+                <p class="name">${members[i].name} ${members[i].surname}</p>
+              </div>
+              <div class="price-container">
+                <p class="price-header">Price</p>
+                <p class="price-tag">1.2</p>
+              </div>
+            </div>
+            <a href="detail.html?memberId=${members[i].memberId}">Buy Now</a>
+          </div>`
+		);
+		// If member has no avatar, than it will show another image
+		if (members[i].avatar === "") document.querySelector(".card-image").src = "../assets/not-available.png";
+	}
+}
+
 /**
  * description
  * @async
@@ -67,6 +95,7 @@ async function renderData(members) {
 async function getRandomData() {
 	const data = await getData();
 	let randomNfts = [];
+	let totalNft = [];
 	for (let i = 0; i < totalRandomNFTS; i++) {
 		let random = Math.floor(Math.random() * data.length);
 		while (randomNfts.includes(data[random])) {
@@ -75,6 +104,7 @@ async function getRandomData() {
 		randomNfts.push(data[random]);
 	}
 	renderData(randomNfts)
+	renderMarketData(randomNfts);
 }
 
 /**
