@@ -321,7 +321,7 @@ li img {
   border: none;
   background: none;
   right: 2em;
-  z-index: 99;
+  z-index: 7000;
 }
 
 .menu span {
@@ -436,6 +436,283 @@ li img {
 main {
   padding: 2rem 1.25rem;
 }
+
+/* Hero Section */
+
+.hero_section h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	font-size: 2.5em;
+}
+
+.hero_section p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 2em;
+	margin-top: 1em;
+	margin-left: 1em;
+	font-size: 18px;
+}
+.hero_section button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	margin-top: 2em;
+  margin-left: 5em;
+}
+.hero_section button:hover {
+	cursor: pointer;
+}
+.hero_section :nth-child(3) {
+	width: 10em;
+	height: 4em;
+	border-style: none;
+	border-radius: 2em;
+	background-color: var(--blue);
+	color: var(--white);
+ 
+	/* margin-left:6em; */
+}
+
+.hero_section :nth-child(4) {
+	width: 10em;
+	height: 4em;
+	border-style: none;
+	border-radius: 2em;
+	background-color: var(--blue);
+	color: var(--white);
+  
+	/* margin-left: 6em; */
+ 
+}
+
+/* slider */
+#home img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.trigger {
+	display: none;
+}
+
+.slider,
+.slider-wrapper {
+	position: relative;
+	height: 350px;
+  margin-top: -5em;
+}
+.slider-wrapper{
+  margin-bottom: 5em;
+}
+
+.slide {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 5000;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.slide-img {
+	height: 15.5em;
+  width: 15.5em;
+	object-fit: fill;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+  margin-top: 7em;
+}
+
+.trigger:checked + .slide {
+	z-index: 6000;
+	opacity: 1;
+}
+
+.slider-nav {
+  display: flex;
+  flex-direction: row;
+	width: 100%;
+	text-align: center;
+  margin: 1rem 0;
+  
+}
+
+.slider-nav__item {
+display: inline-block;
+}
+
+.slider-nav__label {
+	font-size: 13px;
+	background-color: var(--white);
+	display: block;
+  position: absolute;
+  margin-left: -2em; 
+	height: 1em;
+	line-height: 2em;
+	width: 1em;
+	text-align: center;
+	border-radius: 50%;
+	background-color: var(--white);
+	cursor: pointer;
+	transition: background-color 0.25s, color 0.25s ease-in-out;
+}
+
+.slider-nav__label:hover,
+.slider-nav__label:active,
+.slider-nav__label:focus {
+	background-color: gray;
+	color: black;
+}
+
+
+
+
+/*media*/
+ @media (min-width: 15rem){
+  .hero_section :nth-child(3){
+    margin-left: 1em;
+    margin-bottom: -6em;
+  }
+  .hero_section :nth-child(4){
+    margin-left: 14em; 
+  }
+  .slide-img{
+    width: 20em;
+    height: 15em;
+  }
+  .slider-nav__label{
+   margin-left:-2em;
+  }
+
+}
+@media (min-width: 30rem){
+   .hero_section :nth-child(3){
+     margin-left: 5em;
+     
+
+   }
+   .hero_section :nth-child(4){
+     margin-left:19em;
+   }
+   
+ }
+
+ @media (min-width:40rem){
+  .hero_section :nth-child(3){
+    margin-left: 15em; 
+    color: lightcoral;
+  }
+  .hero_section :nth-child(4){
+    margin-left: 28em;
+  }
+  .slider-nav__label{
+    margin-left: -26em;
+  }
+}
+
+@media (min-width: 50rem){
+ .slider-wrapper{
+   margin-left: 29em;
+   margin-top: -34em;
+  }
+  .hero_section{
+    margin-top: 2em ;
+  }
+  .hero_section h1{
+  margin-right:8em;
+
+  }
+  .hero_section p{
+    margin-right:23em;
+    
+  }
+  .hero_section button{
+    margin-bottom: 30em;
+  }
+  .hero_section :nth-child(3){
+    margin-top: 1em;
+    margin-left: 1em;
+   
+  }
+  .hero_section :nth-child(4){
+    margin-left: 13em;
+  }
+  .slide{
+    margin-left: 1em;
+    margin-top: -17em;
+  }
+  .slider-nav__label{
+    margin-top: -20em;
+    margin-left: -10em;
+  }
+  .slide-img{
+    width: 37vw;
+    height: 30vh;
+  }
+
+ }
+@media (min-width:64rem){
+  .hero_section h1{
+    margin-right: 12em;
+    color:lightgreen
+  }
+  .hero_section p{
+    margin-right: 33em
+  }
+  .slider-nav__label{
+    margin-top: -20em;
+    margin-left: -17em;
+  }
+  .slide{
+    margin-left: 1em;
+  }
+  
+  .slide-img{
+     width: 40vw;
+     height: 31vh;  
+  }
+}
+@media (min-width: 80rem){
+  .hero_section h1{
+    color: rgb(189, 228, 17);
+    margin-right: 18em;
+  }
+  .hero_section p{
+    margin-right: 37em;
+  }
+  .slide{
+    margin-top: -13em;
+    margin-left: 6em;
+  }
+  
+  .slide-img{
+    font-size: 0.5em;
+    height: 40em;
+  }
+  .slider-nav__label{
+    margin-left: -26em;
+    margin-top: -15em;
+  }
+}
+
+/* @media (min-width:80rem){
+  .slider-nav__label{
+    margin-left: -28em;
+  }
+} */
+
+  
+
 
 /* MARKET */
 
