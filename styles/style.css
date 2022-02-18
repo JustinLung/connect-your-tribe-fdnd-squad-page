@@ -322,6 +322,15 @@ li img {
   background: none;
   right: 2em;
   z-index: 99;
+  cursor: pointer;
+}
+
+.menu:after {
+  content: "MENU";
+  color: var(--white);
+  position: relative;
+  left: -.4em;
+  top: 1.5em;
 }
 
 .menu span {
