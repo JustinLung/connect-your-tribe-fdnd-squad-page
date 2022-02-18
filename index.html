@@ -1,109 +1,111 @@
 </html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>TribeFDNFT - Home</title>
-  </head>
-  <body>
-    <div class="preloader">
-      <div class="loader">
-        <svg viewBox="0 0 80 80">
-            <circle id="test" cx="40" cy="40" r="32"></circle>
-        </svg>
-      </div>
-    
-      <div class="loader triangle">
-        <svg viewBox="0 0 86 80">
-            <polygon points="43 8 79 72 7 72"></polygon>
-        </svg>
-      </div>
-    
-      <div class="loader">
-        <svg viewBox="0 0 80 80">
-            <rect x="8" y="8" width="64" height="64"></rect>
-        </svg>
-      </div>    
-    </div>
-    <header>
-      <h1>TribeFDNFT</h1>
-      <button class="menu" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#market">Market</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="nav-text">Follow us</li>
-          <li>
-            <ul>
-              <li>
-                <a href="https://discord.gg/B98W27CHzc" target="_blank"
-                  ><img src="assets/discord-logo.svg" alt="Discord Logo"
-                /></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/fdnd.nl/" target="_blank"
-                  ><img src="assets/instagram-logo.svg" alt="Instagram Logo"
-                /></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>TribeFDNFT - Home</title>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="test" cx="40" cy="40" r="32"></circle>
+      </svg>
+    </div>
+
+    <div class="loader triangle">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <rect x="8" y="8" width="64" height="64"></rect>
+      </svg>
+    </div>
+  </div>
+  <header>
+    <h1>TribeFDNFT</h1>
+    <button class="menu" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#market">Market</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="nav-text">Follow us</li>
+        <li>
+          <ul>
+            <li>
+              <a href="https://discord.gg/B98W27CHzc" target="_blank"><img src="assets/discord-logo.svg"
+                  alt="Discord Logo" /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/fdnd.nl/" target="_blank"><img src="assets/instagram-logo.svg"
+                  alt="Instagram Logo" /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero-section-wrapper">
       <section id="home" class="hero_section">
-				<h1>Discover, Buy & Sell Extraordinary NFTS. </h1>
-                <p>On the worlds first & largest FDNFT marketplace. explore the many NFTs arts 
-                    from various FDND students from all over the class.</p>
-                <button>Learn more</button>
-                <button>Market</button>
-			</section> 
+        <h2>Discover, Buy & Sell <br> Extraordinary NFTS. </h2>
+        <p>On the worlds first & largest FDNFT marketplace. explore the many NFTs arts
+          from various FDND students from all over the class.</p>
+        <button>Learn more</button>
+        <button>Market</button>
+      </section>
 
       <div class="slider-wrapper">
         <div class="slider">
           <input type="radio" name="slider" class="trigger" id="one" checked="checked" />
           <div class="slide">
-          <img class="slide-img" src="assets/Daan visitekaart.png" />
-        </div><!-- .slide -->
+            <img class="slide-img" src="assets/Daan visitekaart.png" />
+          </div>
 
           <input type="radio" name="slider" class="trigger" id="two" />
-        <div class="slide">
-           <img class="slide-img" src="assets/Justin visitekaart.png" />
-         </div><!-- .slide -->
+          <div class="slide">
+            <img class="slide-img" src="assets/Justin visitekaart.png" />
+          </div>
 
           <input type="radio" name="slider" class="trigger" id="three" />
-        <div class="slide">
+          <div class="slide">
             <img class="slide-img" src="assets/Daan visitekaart.png" />
-        </div><!-- .slide -->
-    </div><!-- .slider -->
-      
-    <div class="slider-nav-dots">
-        <ul class="slider-nav">
-          <li class="slider-nav__item"><label class="slider-nav__label" for="one"></label></li>
-          <li class="slider-nav__item"><label class="slider-nav__label" for="two"></label></li>
-          <li class="slider-nav__item"><label class="slider-nav__label" for="three"></label></li>
-        </ul><!-- .slider-nav -->
+          </div>
         </div>
-      </div><!-- .slider-wrapper -->
 
-      <section id="market">
-        <h2>Market</h2>
-        <p>Buy our NFT's on our FDNFT Market.</p>
-        <a href="market.html">View All NFTS</a>
-        <div class="market-container">
-          <noscript>
-            <h2 style="text-align: center;">Oops.. something went wrong ;(</h2>
-            <p style="text-align: center;">Please turn on your Javascript to see all students</p>
-          </noscript>
+        <div class="slider-nav-dots">
+          <ul class="slider-nav">
+            <li class="slider-nav__item"><label class="slider-nav__label" for="one"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="two"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="three"></label></li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <section id="market">
+      <h2>Market</h2>
+      <p>Buy our NFT's on our FDNFT Market.</p>
+      <a href="market.html">View All NFTS</a>
+      <div class="market-container">
+        <noscript>
+          <h2 style="text-align: center;">Oops.. something went wrong ;(</h2>
+          <p style="text-align: center;">Please turn on your Javascript to see all students</p>
+        </noscript>
+      </div>
+    </section>
 
     <section id="about" class="aboutSectionContainer">
       <div>
@@ -116,20 +118,21 @@
       </div>
       <img class="aboutSectionImg" src="/assets/aboutSection.svg" alt="about-section-image">
     </section>
-    </main>
+  </main>
 
-    <footer>
-      <p>Copyright © TribeFDNFT</p>
-    </footer>
+  <footer>
+    <p>Copyright © TribeFDNFT</p>
+  </footer>
 
-    <div class="error">
-      <img src="assets/warning.svg" alt="error" />
-      <div>
-        <h2>Oops... Something went wrong</h2>
-        <p>It appears that the API is not working.</p>
-      </div>
+  <div class="error">
+    <img src="assets/warning.svg" alt="error" />
+    <div>
+      <h2>Oops... Something went wrong</h2>
+      <p>It appears that the API is not working.</p>
     </div>
+  </div>
 
-    <script src="scripts/main.js"></script>
-  </body>
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>
