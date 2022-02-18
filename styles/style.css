@@ -472,6 +472,7 @@ br {
   font-size: 1.1rem;
   line-height: 2rem;
   letter-spacing: 0.1rem;
+  margin-bottom: 1em;
 }
 
 .hero_section button {
@@ -483,8 +484,8 @@ br {
   color: var(--white);
   border-style: none;
   border-radius: 2em;
-  padding: 1em 2em;
-  margin: 1.5rem 0.2rem;
+  padding: 1em 0;
+  width: 10em;
 }
 
 .hero_section button:hover {
@@ -503,6 +504,7 @@ br {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .slide {
