@@ -330,7 +330,7 @@ li img {
   content: "MENU";
   color: var(--white);
   position: relative;
-  left: -.4em;
+  left: -0.4em;
   top: 1.5em;
 }
 
@@ -513,14 +513,14 @@ br {
   overflow: hidden;
   position: absolute;
   height: 100%;
-  left: 0;  
+  left: 0;
   top: 0;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .slide-img {
@@ -774,6 +774,8 @@ br {
     margin-right: 0rem;
   }
 }
+
+/* DETAIL PAGE */
 
 footer {
   background-color: var(--black);
