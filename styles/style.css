@@ -564,11 +564,13 @@ br {
   color: var(--black);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 55em) {
   .hero-section-wrapper {
     flex-direction: row;
     gap: 2em;
     padding: 2em;
+    max-width: 80em;
+    margin-inline: auto;
   }
 
   .slider-wrapper {
@@ -623,7 +625,7 @@ br {
   display: block;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 60em) {
   #market {
     padding: 2em;
   }
