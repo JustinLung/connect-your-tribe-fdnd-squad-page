@@ -14,7 +14,6 @@ menu.addEventListener('click', () => {
 
 getRandomData();
 
-
 // Functions
 // Function that gets the data from the Tribe API
 async function getData() {
@@ -22,8 +21,8 @@ async function getData() {
 		const request = await fetch(`${baseURL}${memberEndpoint}`);
 		const response = await request.json();
 		hidePreloader();
+		renderMarketData(response.data.filter(student=>student.squadId === 1));
 		return response.data.filter(student => student.squadId === 1)
-		// renderData(response.data);
 	} catch (err) {
 		errorMessage();
 		hidePreloader();
@@ -31,11 +30,10 @@ async function getData() {
 	}
 }
 
-// Function that renders the data for the market section
-async function renderData(members) {
+async function renderMarketData(members) {
 	// Filters the members on squadId.
 	for (let i = 0; i < members.length; i++) {
-		document.querySelector(".market-container").insertAdjacentHTML(
+		document.querySelector(".overviewPageCardContainer").insertAdjacentHTML(
 			"afterbegin",
 			`          
 			<div class="card">
@@ -60,9 +58,11 @@ async function renderData(members) {
 	}
 }
 
-async function renderMarketData(members) {
+// Function that renders the data for the market section
+async function renderHomeData(members) {
+	// Filters the members on squadId.
 	for (let i = 0; i < members.length; i++) {
-		document.querySelector(".overviewPageCardContainer").insertAdjacentHTML(
+		document.querySelector(".market-container").insertAdjacentHTML(
 			"afterbegin",
 			`          
 			<div class="card">
@@ -95,16 +95,15 @@ async function renderMarketData(members) {
 async function getRandomData() {
 	const data = await getData();
 	let randomNfts = [];
-	let totalNft = [];
 	for (let i = 0; i < totalRandomNFTS; i++) {
 		let random = Math.floor(Math.random() * data.length);
 		while (randomNfts.includes(data[random])) {
 			random = Math.floor(Math.random() * data.length);
 		}
 		randomNfts.push(data[random]);
+
 	}
-	renderData(randomNfts)
-	renderMarketData(randomNfts);
+	renderHomeData(randomNfts)
 }
 
 /**

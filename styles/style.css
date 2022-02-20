@@ -9,6 +9,7 @@
 
 *,
 html {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -439,6 +440,7 @@ main {
 
 /* MARKET */
 
+.overviewPageCardContainer,
 .market-container {
   padding: 2em;
   border-radius: 0.5em;
@@ -480,6 +482,7 @@ main {
     padding: 2em;
   }
 
+  .overviewPageCardContainer,
   .market-container {
     display: flex;
     flex-wrap: wrap;
