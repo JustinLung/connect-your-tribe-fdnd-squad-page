@@ -812,6 +812,9 @@ br {
   margin-top: -3em;
 
 }
+.detail-name-container{
+  margin-top: 10em;
+}
 
 .price-container-detail p {
   display: flex;
