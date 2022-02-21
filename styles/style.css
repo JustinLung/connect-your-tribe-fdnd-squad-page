@@ -476,18 +476,22 @@ br {
   margin-bottom: 1em;
 }
 
-.hero_section button {
+.hero_section button{
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background-color: var(--blue);
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,14,246,1) 0%, rgba(14,143,246,1) 99%);
   color: var(--white);
   border-style: none;
   border-radius: 2em;
   padding: 1em 0;
   width: 10em;
 }
+
+
+
 
 .hero_section button:hover {
   cursor: pointer;
