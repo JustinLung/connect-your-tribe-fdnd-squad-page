@@ -777,6 +777,80 @@ br {
 
 /* DETAIL PAGE */
 
+
+.detail-card{
+  display: flex;
+  flex-direction: row ;
+  background-color: var(--black);
+  margin:3em;
+  height: 35em;
+  width: 80%;
+
+}
+.detail-card img{
+  border-radius: 0.2em;
+  margin: 3.5em;
+  margin-top: 6em;
+  width: 35%;
+  height:60%;
+  object-fit: cover;
+  
+}
+.detail-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.detail-name{
+  margin-bottom: 1em;
+}
+.price-container-detail .price-header-detail,
+.detail-header .detail-name-header {
+  position: relative;
+  opacity: 0.8;
+  margin-top: -3em;
+
+}
+
+.price-container-detail p {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3em;
+  gap: 0.2em;
+}
+
+.price-container-detail .price-tag-detail::before {
+  content: "";
+  background-image: url("../assets/ethereum-eth-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+}
+.description-info{
+  padding-bottom: 1em;
+}
+
+.buy{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,14,246,1) 0%, rgba(14,143,246,1) 99%);
+  color: var(--white);
+  border-style: none;
+  border-radius: 2em;
+  padding: 1em 0;
+  width: 10em;
+  /* margin-top: 1em; */
+
+}
+
+
 footer {
   background-color: var(--black);
   text-align: center;
