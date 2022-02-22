@@ -780,7 +780,7 @@ br {
 
 .detail-card{
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   background-color: var(--black);
   margin:3em;
   height: 35em;
@@ -835,6 +835,7 @@ br {
 }
 .description-info{
   padding-bottom: 1em;
+  margin-right: 2em;
 }
 
 .buy{
@@ -851,6 +852,28 @@ br {
   width: 10em;
   /* margin-top: 1em; */
 
+}
+@media (max-width: 55rem){
+  .detail-card{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em;
+    align-items: center;
+    justify-content: center;
+    height: 40em;
+  }
+  .detail-header{
+   margin-top: 3em;
+
+  }
+  .detail-card img{
+    margin: 3.5em;
+    margin-top: 1em;
+    width: 60%;
+  }
+.detail-name-container{
+  margin-top: -1em;
+}
 }
 
 
