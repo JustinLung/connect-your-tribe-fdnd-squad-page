@@ -782,7 +782,6 @@ br {
   display: flex;
   flex-direction: row;
   line-height: 1.5rem;
-
   background-color: var(--black);
   margin:3em;
   height: 35em;
@@ -802,6 +801,7 @@ br {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: -2em;
 }
 
 .detail-name{
