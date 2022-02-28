@@ -781,6 +781,8 @@ br {
 .detail-card{
   display: flex;
   flex-direction: row;
+  line-height: 1.5rem;
+
   background-color: var(--black);
   margin:3em;
   height: 35em;
