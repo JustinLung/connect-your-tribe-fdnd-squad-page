@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>TribeFDNFT - Home</title>
-  </head>
 
-  <body>
-    <header>
-      <h1>TribeFDNFT</h1>
-      <button class="menu" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#market">Market</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li class="nav-text">Follow us</li>
-          <li>
-            <ul>
-              <li>
-                <a href="https://discord.gg/B98W27CHzc" target="_blank"
-                  ><img src="assets/discord-logo.svg" alt="Discord Logo"
-                /></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/fdnd.nl/" target="_blank"
-                  ><img src="assets/instagram-logo.svg" alt="Instagram Logo"
-                /></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>TribeFDNFT - Home</title>
+</head>
 
-    <main>
-      <div class="detail-card">
-        <img src="assets/justin-visitekaart.png">
-       <div class="detail-header">
-        <div class="detail-name-container">
-          <h2 class="detail-name-header">FDND Student</h2>
-          <p class="detail-name">#2- Justin Lung</p>
-
-          <div class="price-container-detail">
-            <p class="price-header-detail">Price</p>
-            <p class="price-tag-detail">1.2</p>
-          </div>
-          <div class="description-container">
-          <h3 class="description">Description</h3>
-          <p class="description-info">Mijn naam is Daan Korver en ik ben 21 jaar oud, mijn hobbies zijn krachttraining, gamen, programmeren, ontwerpen en werken met het bestuuringsysteem Linux. Ik heb een portfolio maar deze is nog in de maak. Als je hem alvast wilt bekijken, kijk dan op: www.daankorver.nl</p>
-          <button class="buy">Buy now</button>
-        </div>
-        </div>
-       </div>
-      </div>
-    </main>
-
-    <footer>
-      <p>Copyright © TribeFDNFT</p>
-    </footer>
-
-    <div class="error">
-      <img src="assets/warning.svg" alt="error" />
-      <div>
-        <h2>Oops... Something went wrong</h2>
-        <p>It appears that the API is not working.</p>
-      </div>
+<body>
+  <div class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="test" cx="40" cy="40" r="32"></circle>
+      </svg>
     </div>
 
-    <script src="scripts/main.js"></script>
-  </body>
+    <div class="loader triangle">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <rect x="8" y="8" width="64" height="64"></rect>
+      </svg>
+    </div>
+  </div>
+  <header>
+    <h1>TribeFDNFT</h1>
+    <button class="menu" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="nav-text">Follow us</li>
+        <li>
+          <ul>
+            <li>
+              <a href="https://discord.gg/B98W27CHzc" target="_blank"><img src="assets/discord-logo.svg"
+                  alt="Discord Logo" /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/fdnd.nl/" target="_blank"><img src="assets/instagram-logo.svg"
+                  alt="Instagram Logo" /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="detail-card"></div>
+  </main>
+
+  <footer>
+    <p>Copyright © TribeFDNFT</p>
+  </footer>
+
+  <div class="error">
+    <img src="assets/warning.svg" alt="error" />
+    <div>
+      <h2>Oops... Something went wrong</h2>
+      <p>It appears that the API is not working.</p>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>

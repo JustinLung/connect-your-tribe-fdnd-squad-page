@@ -5,6 +5,9 @@ const baseURL = "https://tribe.api.fdnd.nl/v1";
 const memberEndpoint = "/member";
 const errorMsg = document.querySelector(".error");
 const preloader = document.querySelector(".preloader");
+
+const query = window.location.search;
+const id = parseInt(new URLSearchParams(query).get('memberId'));
 const totalRandomNFTS = 6;
 
 menu.addEventListener('click', () => {
@@ -13,6 +16,7 @@ menu.addEventListener('click', () => {
 });
 
 getRandomData();
+renderDetailData();
 
 // Functions
 // Function that gets the data from the Tribe API
@@ -21,13 +25,21 @@ async function getData() {
 		const request = await fetch(`${baseURL}${memberEndpoint}`);
 		const response = await request.json();
 		hidePreloader();
-		renderMarketData(response.data.filter(student=>student.squadId === 1));
+		renderMarketData(response.data.filter(student => student.squadId === 1));
 		return response.data.filter(student => student.squadId === 1)
 	} catch (err) {
 		errorMessage();
 		hidePreloader();
 		throw new Error(err);
 	}
+}
+
+async function getMemberId() {
+	const request = await fetch(`${baseURL}${memberEndpoint}`);
+	const response = await request.json();
+	console.log(response);
+	console.log(id);
+	return response.data.find(student => student.memberId === id);
 }
 
 async function renderMarketData(members) {
@@ -85,6 +97,33 @@ async function renderHomeData(members) {
 		// If member has no avatar, than it will show another image
 		if (members[i].avatar === "") document.querySelector(".card-image").src = "../assets/not-available.png";
 	}
+}
+
+async function renderDetailData() {
+	const member = await getMemberId();
+	console.log(member)
+	const detailCard = document.querySelector(".detail-card");
+	detailCard.insertAdjacentHTML("afterbegin", (
+		`<img src="${member.avatar}" alt="profile picture">
+		<div class="detail-header">
+		  <div class="detail-name-container">
+			<h2 class="detail-name-header">${member.type}</h2>
+			<p class="detail-name">${member.name} ${member.prefix} ${member.surname}</p>
+  
+			<div class="price-container-detail">
+			  <p class="price-header-detail">Price</p>
+			  <p class="price-tag-detail">1.2</p>
+			</div>
+
+			<div class="description-container">
+			  <h3 class="description">Description</h3>
+			  <p class="description-info">${member.bio}</p>
+			  <a href="${member.url}" target="_blank" class="buy">Buy now</a>
+			</div>
+
+		  </div>
+		</div>`
+	))
 }
 
 /**

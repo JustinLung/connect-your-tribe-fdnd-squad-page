@@ -777,44 +777,43 @@ br {
 
 /* DETAIL PAGE */
 
-
-.detail-card{
+.detail-card {
   display: flex;
   flex-direction: row;
   line-height: 1.5rem;
   background-color: var(--black);
-  margin:3em;
+  margin: 3em auto;
   height: 35em;
-  width: 80%;
-
+  max-width: 70em;
+  border-radius: .5em;
 }
-.detail-card img{
+
+.detail-card img {
   border-radius: 0.2em;
   margin: 3.5em;
   margin-top: 6em;
   width: 35%;
-  height:60%;
+  height: 60%;
   object-fit: cover;
-  
 }
-.detail-header{
+.detail-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 
-.detail-name{
+.detail-name {
   margin-bottom: 2em;
 }
+
 .price-container-detail .price-header-detail,
 .detail-header .detail-name-header {
   position: relative;
   opacity: 0.8;
   margin-top: -4em;
-
 }
-.detail-name-container{
+
+.detail-name-container {
   margin-top: 10em;
 }
 
@@ -823,7 +822,6 @@ br {
   justify-content: flex-end;
   margin-right: 3em;
   gap: 0.2em;
- 
 }
 
 .price-container-detail .price-tag-detail::before {
@@ -835,30 +833,35 @@ br {
   width: 1.5em;
   height: 1.5em;
   display: block;
- 
 }
-.description-info{
+
+.description-info {
   padding-bottom: 1em;
   margin-right: 2em;
 }
 
-.buy{
+.buy {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,14,246,1) 0%, rgba(14,143,246,1) 99%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(88, 14, 246, 1) 0%,
+    rgba(14, 143, 246, 1) 99%
+  );
   color: var(--white);
   border-style: none;
   border-radius: 2em;
   padding: 1em 0;
   width: 10em;
   /* margin-top: 1em; */
-
 }
-@media (max-width: 55rem){
-  .detail-card{
+
+@media (max-width: 55rem) {
+  .detail-card {
     display: flex;
     flex-direction: column;
     padding: 2.5em;
@@ -866,20 +869,18 @@ br {
     justify-content: center;
     height: 40em;
   }
-  .detail-header{
-  margin-top: 1em;
-
+  .detail-header {
+    margin-top: 1em;
   }
-  .detail-card img{
+  .detail-card img {
     height: 50%;
     width: 60%;
-   margin-top: 1em;
+    margin-top: 1em;
   }
-.detail-name-container{
-  margin-top: 3em;
+  .detail-name-container {
+    margin-top: 3em;
+  }
 }
-}
-
 
 footer {
   background-color: var(--black);
